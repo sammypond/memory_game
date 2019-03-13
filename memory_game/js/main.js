@@ -50,13 +50,12 @@ function flipCard() {
 
 
 function createBoard() {
-  const cardTable = document.getElementById('game-board');
   for (var i = 0; i < cards.length; i++) {
     var cardElement = document.createElement('img');
     cardElement.setAttribute('src', 'images/back.png');
     cardElement.setAttribute('data-id', i);
     cardElement.addEventListener('click', flipCard);
-    cardTable.appendChild(cardElement);
+    document.getElementById('game-board').appendChild(cardElement);
 
   }
 };
